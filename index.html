@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First JS Github Project</title>
+  </head>
+  <body>
+    <h1>Chunky Monkey</h1>
+    <p>Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as a two-dimensional array.</p>
+    <script>
+    function chunkArrayInGroups(arr, size) {
+let result = [];
+let i = 0;
+let j = size;
+while (i < arr.length) {
+ result.push(arr.slice(i, j)); //With (i, size) the second time it will slice from index 2 to 2!
+ i += size;
+ j += size;
+}
+return result;
+}
+
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+    </script>
+  </body>
+</html>
